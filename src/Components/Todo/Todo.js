@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import "./Todo.css";
 
 export default function Todo() {
+  const [toggle, setToggle] = useState(false);
+
+  const funcToggle = () => {
+    setToggle(!toggle);
+  };
+
   const myList = [
     {
       task: "Faire les courses",
@@ -20,24 +26,30 @@ export default function Todo() {
     },
   ];
   return (
-    <div>
-      <h1>Ma liste</h1>
-
-      <div className="overlay">
-        <div className="my-modal">
-          <ul className="ul-list">
-            {myList.map((item, index) => {
-              return (
-                <li className="li-list" key={index}>
-                  {item.task}
-                  <button className="btn-list">Date : {item.date}</button>
-                </li>
-              );
-            })}
-          </ul>
-          <button className="btn-close-list">X</button>
+    <div className="list-container">
+      <h1 className="title-list">Ma liste</h1>
+      <button className="open-list" onClick={funcToggle}>
+        Voir ma liste
+      </button>
+      {toggle && (
+        <div className="overlay">
+          <div className="my-modal">
+            <ul className="ul-list">
+              {myList.map((item, index) => {
+                return (
+                  <li className="li-list" key={index}>
+                    {item.task}
+                    <button className="btn-list">Date : {item.date}</button>
+                  </li>
+                );
+              })}
+            </ul>
+            <button onClick={funcToggle} className="btn-close-list">
+              X
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
