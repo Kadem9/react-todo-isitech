@@ -1,0 +1,22 @@
+.li-list-new {
+  width: 50%;
+  background-color: rgb(255, 142, 142);
+  padding: 10px;
+  list-style-type: none;
+  margin: 10px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-list-new {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.title-budget {
+  margin-top: 5px;
+}

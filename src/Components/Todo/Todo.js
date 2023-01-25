@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Todo.css";
+import Task from "./Task";
 
 export default function Todo() {
   const [toggle, setToggle] = useState(false);
@@ -35,14 +36,7 @@ export default function Todo() {
         <div className="overlay">
           <div className="my-modal">
             <ul className="ul-list">
-              {myList.map((item, index) => {
-                return (
-                  <li className="li-list" key={index}>
-                    {item.task}
-                    <button className="btn-list">Date : {item.date}</button>
-                  </li>
-                );
-              })}
+              <Task props={myList} />
             </ul>
             <button onClick={funcToggle} className="btn-close-list">
               X

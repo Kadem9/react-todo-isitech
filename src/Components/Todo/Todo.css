@@ -76,3 +76,37 @@
 .title-list {
   display: block;
 }
+
+.label-add-task {
+  display: block;
+  margin-top: 10px;
+}
+
+.input-task {
+  padding: 10px;
+  border-radius: 10px;
+  width: auto;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+}
+
+.input-valid-task {
+  background-color: rgb(78, 177, 78);
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.title-add-task {
+  margin-top: 20px;
+  text-transform: uppercase;
+  background-color: rgb(250, 186, 186);
+  padding: 8px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+}

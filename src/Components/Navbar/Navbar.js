@@ -10,7 +10,10 @@ export default function Navbar() {
           Accueil
         </Link>
         <Link to="/ma-liste" className="li-navbar">
-          Ma liste
+          Ma liste (latest)
+        </Link>
+        <Link to="/todo-list" className="li-navbar">
+          Ma liste (new)
         </Link>
         <Link to="/contact" className="li-navbar">
           Contact
